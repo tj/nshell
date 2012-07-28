@@ -74,10 +74,10 @@ exports.PS1 = function(){
 
 ```
 > pwd
-> /Users/tj/projects/nshell
+/Users/tj/projects/nshell
 > node_modules/commander
 > pwd
-> /Users/tj/projects/nshell/node_modules/commander
+/Users/tj/projects/nshell/node_modules/commander
 > ../..
 > pwd
 /Users/tj/projects/nshell
