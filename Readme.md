@@ -22,15 +22,15 @@
 
   Small set of features so far:
   
-    - PS1
-    - pipelining
-    - auto-cd
-    - aliases
-    - sources `~/.profile.js`
-    - saves history to `~/.nshell-history`
-    - brace expansion
-    - filename auto-completion
-    - `.`, `cd`, `which`, `exit`, `!!` builtins
+  - PS1
+  - pipelining
+  - auto-cd
+  - aliases
+  - sources `~/.profile.js`
+  - saves history to `~/.nshell-history`
+  - brace expansion
+  - filename auto-completion
+  - `.`, `cd`, `which`, `exit`, `!!` builtins
 
 ### ~/.profile.js
 
