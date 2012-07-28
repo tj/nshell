@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var program = require('commander')
+  , Shell = require('..');
+
+// options
+
+program.parse(process.argv);
+
+// shell
+
+shell = new Shell(process);
