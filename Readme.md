@@ -31,6 +31,7 @@
   - brace expansion
   - filename auto-completion
   - some builtins
+  - some magic variables
 
 ### Built-ins
 
@@ -41,6 +42,13 @@
   - `which` -- search __PATH__ for an executable
   - `exit` -- exit nshell
   - `history` -- view history
+
+### Variables
+
+  Currently the following magic vars are available:
+  
+  - `$?` the exit status of the previous command
+  - `!!` the string value of the previous command
 
 ### ~/.profile.js
 
