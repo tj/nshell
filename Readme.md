@@ -85,6 +85,17 @@ exports.PS1 = function(){
 > rm foo{bar,baz}
 ```
 
+### Sourcing
+
+  You may source files much like you do with `require()` in node,
+  support you have "test.js", you may load it with either of
+  the following:
+
+```
+> . test.js
+> . test
+```
+
 ### Auto-cd
 
   By default `nshell(1)` auto-chdirs when
