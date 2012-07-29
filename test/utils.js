@@ -36,6 +36,11 @@ describe('utils.parse(str)', function(){
     var cmds = utils.parse('foo{bar,baz,raz}');
     cmds[0].should.eql({ env: {}, argv: ['foobaz', 'fooraz'], name: 'foobar' });
   })
+
+  it('should parse !!', function(){
+    var cmds = utils.parse('echo !!');
+    cmds[0].should.eql({ env: {}, argv: ['!!'], name: 'echo' });
+  })
 })
 
 describe('utils.unquote(str)', function(){
