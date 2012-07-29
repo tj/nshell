@@ -30,7 +30,17 @@
   - saves history to `~/.nshell-history`
   - brace expansion
   - filename auto-completion
-  - `.`, `cd`, `which`, `exit`, `history`, `!!` builtins
+  - some builtins
+
+### Built-ins
+
+  Currently the following built-ins are available:
+  
+  - `.` -- source a javascript file
+  - `cd` -- change directory
+  - `which` -- search __PATH__ for an executable
+  - `exit` -- exit nshell
+  - `history` -- view history
 
 ### ~/.profile.js
 
