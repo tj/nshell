@@ -30,7 +30,7 @@
   - saves history to `~/.nshell-history`
   - brace expansion
   - filename auto-completion
-  - some builtins
+  - some built-ins
   - some magic variables
 
 ### Built-ins
