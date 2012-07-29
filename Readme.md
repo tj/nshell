@@ -51,6 +51,16 @@
   - `$?` the exit status of the previous command
   - `!!` the string value of the previous command
 
+### Events
+
+ Hook into events with `shell.on(event, callback)`:
+
+  - `blank` on a blank line
+  - `cd` (dir) changed directories
+  - `exec` (line) is about to be executed
+  - `alias` (name, cmd) when an alias is defined
+  - `source` (file, mod) when a module is sourced
+
 ### ~/.profile.js
 
   By default `nshell(1)` currently sources `~/.profile.js`,
@@ -125,16 +135,6 @@ shell.alias('DELETE', 'burl DELETE');
 shell.alias('DEL', 'burl DELETE');
 shell.alias('OPTIONS', 'burl OPTIONS');
 ```
-
-### Events
-
- Hook into events with `shell.on(event, callback)`:
-
-  - `blank` on a blank line
-  - `cd` (dir) changed directories
-  - `exec` (line) is about to be executed
-  - `alias` (name, cmd) when an alias is defined
-  - `source` (file, mod) when a module is sourced
 
 ## Debugging
 
