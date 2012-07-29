@@ -56,7 +56,7 @@
  Hook into events with `shell.on(event, callback)`:
 
   - `blank` on a blank line
-  - `cd` (dir) changed directories
+  - `cd` (dir) changing directories
   - `exec` (line) is about to be executed
   - `alias` (name, cmd) when an alias is defined
   - `source` (file, mod) when a module is sourced
