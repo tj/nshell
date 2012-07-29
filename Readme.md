@@ -30,7 +30,7 @@
   - saves history to `~/.nshell-history`
   - brace expansion
   - filename auto-completion
-  - `.`, `cd`, `which`, `exit`, `!!` builtins
+  - `.`, `cd`, `which`, `exit`, `history`, `!!` builtins
 
 ### ~/.profile.js
 
