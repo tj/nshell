@@ -1,7 +1,6 @@
-
 # nshell
 
-  A work-in-progress scriptable shell written with node.
+  A work-in-progress scriptable shell written with node (replacing bash, ksh, etc).
 
 ## Installation
 
