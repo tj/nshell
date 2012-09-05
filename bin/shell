@@ -14,3 +14,4 @@ program.parse(process.argv);
 // shell
 
 shell = new Shell(process);
+shell.boot();
