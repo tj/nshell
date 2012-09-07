@@ -1,6 +1,9 @@
 
-// javascript expansion
+// source with:
+//   > . examples/js-expansion
 //   > echo `Math.pow(2, 32)`
+
+console.log('loaded!');
 
 shell.on('command', function(e){
   e.line = expansion(e.line);

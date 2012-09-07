@@ -1,7 +1,10 @@
 
-/**
- * Module dependencies.
- */
+// source with:
+//   > . examples/auto-cd
+
+console.log('loaded!');
+
+// deps
 
 var fs = require('fs')
   , exists = fs.existsSync
