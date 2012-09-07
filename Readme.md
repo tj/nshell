@@ -107,10 +107,29 @@ exports.PS1 = function(){
 
 ### Auto-cd
 
-  By default `nshell(1)` auto-chdirs when
-  the given line is a directory.
+  By default `nshell(1)` does not auto-chdir when
+  the given line is a directory, however you can
+  easily script this in:
 
+```js
+var fs = require('fs')
+  , exists = fs.existsSync
+  , stat = fs.statSync;
+
+// auto-cd
+
+shell.on('command', function(e){
+  var path = e.line.trim();
+  if (exists(path) && stat(path).isDirectory) {
+    e.preventDefault();
+    shell.exec('cd "' + path + '"');
+  }
+});
 ```
+
+Usage:
+
+```js
 > pwd
 /Users/tj/projects/nshell
 > node_modules/commander
