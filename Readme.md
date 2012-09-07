@@ -23,13 +23,12 @@
   
   - PS1
   - pipelining
-  - auto-cd
+  - scriptability!
   - aliases
   - sources `~/.profile.js`
   - saves history to `~/.nshell-history`
   - brace expansion
   - filename auto-completion
-  - events to hook into
   - some built-ins
   - some magic variables
 
@@ -54,11 +53,11 @@
 
  Hook into events with `shell.on(event, callback)`:
 
-  - `blank` on a blank line
   - `cd` (dir) changing directories
   - `exec` (line) is about to be executed
   - `alias` (name, cmd) when an alias is defined
   - `source` (file, mod) when a module is sourced
+  - `command` (e) when a command line is inputted, but not yet executed
 
 ### ~/.profile.js
 
