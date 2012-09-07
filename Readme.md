@@ -202,9 +202,22 @@ shell.on('command', function(e){
 });
 ```
 
-## Todo
+### Command replay
 
-  tons of shit
+  To replay the previous command on a blank line
+  you can also listen on the "command" event and
+  use the `shell.lastCommand` property, which is
+  populated by the last successfully executed 
+  command line.
+
+```js
+shell.on('command', function(e){
+  if ('' == e.line.trim()) {
+    e.preventDefault();
+    shell.exec(shell.lastCommand);
+  }
+});
+```
 
 ## License 
 
