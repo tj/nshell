@@ -105,6 +105,38 @@ exports.PS1 = function(){
 > . test
 ```
 
+### Aliases
+
+```js
+shell.alias('GET', 'burl GET');
+shell.alias('HEAD', 'burl -I');
+shell.alias('POST', 'burl POST');
+shell.alias('PUT', 'burl PUT');
+shell.alias('PATCH', 'burl PATCH');
+shell.alias('DELETE', 'burl DELETE');
+shell.alias('DEL', 'burl DELETE');
+shell.alias('OPTIONS', 'burl OPTIONS');
+```
+
+## Debugging
+
+```js
+$ DEBUG=nshell ./bin/shell
+> cat Readme.md
+  nshell cmd [{"name":"cat","argv":["Readme.md"]}] +1.1m
+  nshell env {} +0ms
+  nshell which cat +0ms
+  nshell found /bin/cat +2ms
+  nshell spawn /bin/cat ["Readme.md"] +0ms
+  nshell exit 0 +5ms
+  nshell prompt +0ms
+```
+
+## Examples
+
+  Some cool examples showing off the power
+  of scripting your shell!
+
 ### Auto-cd
 
   By default `nshell(1)` does not auto-chdir when
@@ -140,31 +172,34 @@ Usage:
 /Users/tj/projects/nshell
 ```
 
-### Aliases
+### Auto-edit
+
+  By default `nshell(1)` will simply give you
+  a "command not found" error if you try to
+  type a filename, however you can script
+  in the ability to edit that file depending
+  on its mime type:
 
 ```js
-shell.alias('GET', 'burl GET');
-shell.alias('HEAD', 'burl -I');
-shell.alias('POST', 'burl POST');
-shell.alias('PUT', 'burl PUT');
-shell.alias('PATCH', 'burl PATCH');
-shell.alias('DELETE', 'burl DELETE');
-shell.alias('DEL', 'burl DELETE');
-shell.alias('OPTIONS', 'burl OPTIONS');
-```
+// $ npm install mime
 
-## Debugging
+var path = require('path');
+var mime = require('mime');
 
-```js
-$ DEBUG=nshell ./bin/shell
-> cat Readme.md
-  nshell cmd [{"name":"cat","argv":["Readme.md"]}] +1.1m
-  nshell env {} +0ms
-  nshell which cat +0ms
-  nshell found /bin/cat +2ms
-  nshell spawn /bin/cat ["Readme.md"] +0ms
-  nshell exit 0 +5ms
-  nshell prompt +0ms
+// auto-editor (silly implementation)
+
+shell.on('command', function(e){
+  var line = e.line.trim();
+  var type = mime.lookup(line);
+  switch (type) {
+    case 'text/plain':
+    case 'text/css':
+    case 'application/javascript':
+      e.preventDefault();
+      shell.exec('mate "' + line + '"');
+      break;
+  }
+});
 ```
 
 ## Todo

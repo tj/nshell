@@ -4,7 +4,7 @@
 
 console.log('loaded!');
 
-// $npm install mime
+// $ npm install mime
 
 var path = require('path');
 var mime = require('mime');
