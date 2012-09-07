@@ -219,6 +219,38 @@ shell.on('command', function(e){
 });
 ```
 
+### JavaScript expansion
+
+  Modifications to `e.line` are accepted by nshell,
+  this means you can progressively layer on plugins,
+  in this case a naive implementation of "js expansion":
+
+```js
+shell.on('command', function(e){
+  e.line = expansion(e.line);
+});
+
+function expansion(line) {
+  return line.replace(/`(.*?)`/, function(_, js){
+    return eval('(' + js + ')');
+  });
+}
+```
+
+Usage:
+
+```
+▸ echo `Math.pow(2, 32)`
+▸ 4294967296
+▸ cat `"Make" + "file"`
+
+test:
+	@./node_modules/.bin/mocha \
+		--require should \
+		--reporter spec
+...
+```
+
 ## License 
 
 (The MIT License)
