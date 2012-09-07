@@ -101,8 +101,8 @@ exports.PS1 = function(){
   the following:
 
 ```
-> . test.js
-> . test
+▸ . test.js
+▸ . test
 ```
 
 ### Aliases
@@ -122,7 +122,7 @@ shell.alias('OPTIONS', 'burl OPTIONS');
 
 ```js
 $ DEBUG=nshell ./bin/shell
-> cat Readme.md
+▸ cat Readme.md
   nshell cmd [{"name":"cat","argv":["Readme.md"]}] +1.1m
   nshell env {} +0ms
   nshell which cat +0ms
@@ -162,13 +162,13 @@ shell.on('command', function(e){
 Usage:
 
 ```js
-> pwd
+▸ pwd
 /Users/tj/projects/nshell
-> node_modules/commander
-> pwd
+▸ node_modules/commander
+▸ pwd
 /Users/tj/projects/nshell/node_modules/commander
-> ../..
-> pwd
+▸ ../..
+▸ pwd
 /Users/tj/projects/nshell
 ```
 
