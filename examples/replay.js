@@ -8,6 +8,9 @@ console.log('loaded!');
 // blank lines. great for automating
 // things like `make test`.
 
-shell.on('blank', function(){
-  shell.exec(shell.lastCommand);
+shell.on('command', function(e){
+  if ('' == e.line.trim()) {
+    e.preventDefault();
+    shell.exec(shell.lastCommand);
+  }
 });
