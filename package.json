@@ -2,7 +2,11 @@
   "name": "nshell",
   "version": "0.0.1",
   "description": "scriptable shell written with node",
-  "keywords": ["shell", "bash", "sh"],
+  "keywords": [
+    "shell",
+    "bash",
+    "sh"
+  ],
   "author": "TJ Holowaychuk <tj@vision-media.ca>",
   "dependencies": {
     "commander": "1.0.0",
@@ -17,5 +21,9 @@
   "bin": {
     "nshell": "bin/shell"
   },
-  "main": "index"
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visionmedia/nshell.git"
+  }
 }
