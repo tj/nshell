@@ -1,6 +1,6 @@
 {
   "name": "nshell",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "scriptable shell written with node",
   "keywords": [
     "shell",
@@ -21,7 +21,7 @@
     "mocha": "^1.20.1",
     "should": "^4.0.4"
   },
- "repository": "git@github.com:visionmedia/nshell.git",
+  "repository": "git@github.com:visionmedia/nshell.git",
   "scripts": {
     "test": "mocha"
   },
