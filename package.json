@@ -1,6 +1,6 @@
 {
   "name": "nshell",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "scriptable shell written with node",
   "keywords": [
     "shell",
