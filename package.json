@@ -21,6 +21,9 @@
     "mocha": "^1.20.1",
     "should": "^4.0.4"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "bin": {
     "nshell": "bin/shell"
   },
