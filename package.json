@@ -18,8 +18,8 @@
     "minimatch": "^0.3.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*"
+    "mocha": "^1.20.1",
+    "should": "^4.0.4"
   },
   "bin": {
     "nshell": "bin/shell"
