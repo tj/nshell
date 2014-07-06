@@ -23,7 +23,7 @@
   },
   "repository": "git@github.com:visionmedia/nshell.git",
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "bin": {
     "nshell": "bin/shell"

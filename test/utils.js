@@ -4,7 +4,6 @@
  */
 
 var utils = require('../lib/utils');
-var should = require('should')
 
 describe('utils.parse(str)', function(){
   it('should parse the command pipeline', function(){
